@@ -1,1 +1,31 @@
-<p>login works!</p>
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row mt20">
+      <div class="col-md-6 offset-md-3">
+        <mat-card>
+          <div class="container text-center">
+            <img src="../../../assets/cheque.png" alt="" height="100" width="100">
+            <h1>Inicio de sesion</h1>
+            <form (ngSubmit)="formSubmit()">
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Nombre de Usuario:</mat-label>
+                <input [(ngModel)]="loginData.username" name="username" required matInput placeholder="Ingrese su nombre de valido">
+                <mat-hint>El nombre de usuario debe ser unico</mat-hint>
+              </mat-form-field>
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Contraseña</mat-label>
+                <input [(ngModel)]="loginData.password" name="password" required type="password" matInput placeholder="Ingrese su Contraseña">
+              </mat-form-field>
+              <br>
+              <br>
+              <div class="container text-center">
+                <button mat-raised-button color="primary">Ingresar</button>
+                <button type="reset" style="margin-left: 20px;" mat-raised-button color="accent">Limpiar</button>
+              </div>
+            </form>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
