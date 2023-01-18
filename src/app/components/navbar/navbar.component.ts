@@ -8,9 +8,11 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class NavbarComponent implements OnInit {
 
+  showFiller = false;
   isLoggedIn = false;
   user:any = null;
-
+  menuAlumno = 'Alumno'
+  typesOfShoes: string[] = ['Alumnos', 'Docentes', 'Asistencia', 'Reportes', 'Cerrar Sesion'];
   constructor(public login:LoginService) { }
 
   ngOnInit(): void {

@@ -8,11 +8,12 @@ import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { NormalGuard } from './services/normal.guard';
 import { AdminGuard } from './services/admin.guard';
+import { AlumnosComponent } from './pages/alumnos/alumnos.component';
 
 const routes: Routes = [
   {
     path:'',
-    component:HomeComponent,
+    component:LoginComponent,
     pathMatch:'full'
   },
   {
@@ -36,6 +37,12 @@ const routes: Routes = [
     component: UserDashboardComponent,
     pathMatch: 'full',
     canActivate:[NormalGuard]
+  },
+  {
+    path:'admin-alumno',
+    component: AlumnosComponent,
+    pathMatch: 'full',
+    canActivate:[AdminGuard]
   }
 ];
 
