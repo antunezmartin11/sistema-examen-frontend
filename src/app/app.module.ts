@@ -31,6 +31,7 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { AlumnosComponent } from './pages/alumnos/alumnos.component';
 import { MenuComponent } from './pages/menu/menu.component';
+import { SeccionComponent } from './pages/seccion/seccion.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { MenuComponent } from './pages/menu/menu.component';
     DashboardComponent,
     UserDashboardComponent,
     AlumnosComponent,
-    MenuComponent
+    MenuComponent,
+    SeccionComponent
   ],
   imports: [
     BrowserModule,

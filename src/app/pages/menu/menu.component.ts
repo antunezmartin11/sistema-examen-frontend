@@ -15,6 +15,26 @@ export class MenuComponent implements OnInit {
 
     this.items = [
       {
+        label:'Administracion',
+        icon:'pi pi-fw pi-file',
+        items:[
+            {
+                label:'Registro de Seccion',
+                icon:'pi pi-fw pi-plus',
+                routerLink:'../admin-alumno'
+            },
+            {
+                label:'Tipo Contrato',
+                icon:'pi pi-fw pi-excel',
+                routerLink:'../admin-alumno'
+            },
+            {
+                label:'Registro de Area',
+                icon:'pi pi-fw pi-external-link'
+            }
+        ]
+      },
+      {
           label:'Registro',
           icon:'pi pi-fw pi-file',
           items:[
@@ -97,7 +117,7 @@ export class MenuComponent implements OnInit {
           ]
       },
       {
-          label:'Quit',
+          label:'Cerrar',
           icon:'pi pi-fw pi-power-off',
           command:(click) =>{
               this.logout()
