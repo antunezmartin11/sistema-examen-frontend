@@ -1,10 +1,10 @@
-<mat-toolbar color="warn">
+<mat-toolbar color="primary">
   <a [routerLink]="'/'"
   mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
 
   <div class="example-sidenav-content">
-    <button type="button" mat-button (click)="drawer.toggle()">
-      <mat-icon>menu</mat-icon>
+    <button type="button" mat-button >
+      <mat-icon>menu_books</mat-icon>
     </button>
   </div>
   </a>
@@ -18,13 +18,13 @@
   <a *ngIf="!isLoggedIn" [routerLink]="'/signup'" mat-icon-button class="example-icon favorite-icon mr20 ml70" aria-label="Example icon-button with heart icon">
     Registrar
   </a>
-  <a *ngIf="isLoggedIn"
+  <!--<a *ngIf="isLoggedIn"
    (click)="logout()"
    style="margin-right: 50px;"
    class="example-icon favorite-icon"
    aria-label="Example icon-button with heart icon">
     Cerrar Sesion
-  </a>
+  </a>-->
 <br>
   <button *ngIf="login.isLoggedIn()" mat-button style="margin-right: 10px;" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     {{login.getUser().username}}
@@ -32,28 +32,3 @@
   </button>
 
 </mat-toolbar>
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-
-   <mat-selection-list #shoes [multiple]="false">
-    <mat-list-item>
-      <mat-icon matListIcon>folder</mat-icon>
-      <a [routerLink]="'admin-alumno'"
-      mat-icon-button class="example-icon"
-      aria-label="Example icon-button with menu icon">
-    Alumnos prueba
-    </a>
-
-    </mat-list-item>
-    <mat-list-option  [value]="menuAlumno">
-      {{menuAlumno}}
-    </mat-list-option>
-  </mat-selection-list>
-
-
-
-  </mat-drawer>
-
-
-
-</mat-drawer-container>

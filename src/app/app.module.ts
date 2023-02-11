@@ -15,6 +15,10 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
 
+import {MenubarModule} from 'primeng/menubar';
+import {InputTextModule} from 'primeng/inputtext';
+
+
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
@@ -26,6 +30,7 @@ import { authInterceptorProviders } from './services/auth.interceptor';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { AlumnosComponent } from './pages/alumnos/alumnos.component';
+import { MenuComponent } from './pages/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +41,8 @@ import { AlumnosComponent } from './pages/alumnos/alumnos.component';
     HomeComponent,
     DashboardComponent,
     UserDashboardComponent,
-    AlumnosComponent
+    AlumnosComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +59,9 @@ import { AlumnosComponent } from './pages/alumnos/alumnos.component';
     MatIconModule,
     MatSidenavModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    MenubarModule,
+    InputTextModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
