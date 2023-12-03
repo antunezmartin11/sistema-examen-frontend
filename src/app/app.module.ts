@@ -23,7 +23,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './pages/home/home.component';
 import { authInterceptorProviders } from './services/auth.interceptor';
@@ -32,7 +32,13 @@ import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboa
 import { AlumnosComponent } from './pages/alumnos/alumnos.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { SeccionComponent } from './pages/seccion/seccion.component';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DNuevaSeccionComponent } from './pages/seccion/d-nueva-seccion/d-nueva-seccion.component';
+import { MatSelectModule } from '@angular/material/select';
+import { FseccionComponent } from './pages/seccion/fseccion/fseccion.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +50,9 @@ import { SeccionComponent } from './pages/seccion/seccion.component';
     UserDashboardComponent,
     AlumnosComponent,
     MenuComponent,
-    SeccionComponent
+    SeccionComponent,
+    DNuevaSeccionComponent,
+    FseccionComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +71,14 @@ import { SeccionComponent } from './pages/seccion/seccion.component';
     MatListModule,
     MatMenuModule,
     MenubarModule,
-    InputTextModule
+    InputTextModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatSelectModule
+
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

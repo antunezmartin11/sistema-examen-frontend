@@ -1,22 +1,19 @@
-import { HttpHeaders } from '@angular/common/http';
 import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
-import {MatPaginator, MatPaginatorIntl, MatPaginatorModule} from '@angular/material/paginator';
-import {MatSort, MatSortModule} from '@angular/material/sort';
-import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { DNuevaSeccionComponent } from '../d-nueva-seccion/d-nueva-seccion.component';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { SeccionService } from 'src/app/services/seccion.service';
-import { DNuevaSeccionComponent } from './d-nueva-seccion/d-nueva-seccion.component';
 import { MatDialog } from '@angular/material/dialog';
-import { FormGroup } from '@angular/forms';
-
 
 @Component({
-  selector: 'app-seccion',
-  templateUrl: './seccion.component.html',
-  styleUrls: ['./seccion.component.css']
+  selector: 'app-fseccion',
+  templateUrl: './fseccion.component.html',
+  styleUrls: ['./fseccion.component.css']
 })
-export class SeccionComponent implements OnInit {
-
+export class FseccionComponent implements OnInit {
   displayedColumns: string[] = ['nombre', 'enabled', 'abreviatura','opciones'];
   dataSource: MatTableDataSource<any>=new MatTableDataSource();
 
@@ -67,4 +64,5 @@ export class SeccionComponent implements OnInit {
       }
     });
   }
+
 }

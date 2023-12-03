@@ -21,7 +21,7 @@ export class MenuComponent implements OnInit {
             {
                 label:'Registro de Seccion',
                 icon:'pi pi-fw pi-plus',
-                routerLink:'../admin-alumno'
+                routerLink:'../regSeccion'
             },
             {
                 label:'Tipo Contrato',

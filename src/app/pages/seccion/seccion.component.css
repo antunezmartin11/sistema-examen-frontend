@@ -1,0 +1,39 @@
+table {
+  width: 100%;
+
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 25%;
+}
+
+.claseEstadoActivo{
+  background-color: rgb(36, 209, 96);
+  border-radius: 10px;
+  border: none;
+  border-style: none;
+  width: 50%;
+  height: 50% !important;
+  color: whitesmoke;
+  text-align: center;
+}
+.claseEstadoInactivo{
+  background-color: red;
+  border-radius: 10px;
+  border: none;
+  border-style: none;
+  width: 50%;
+  height: 50% !important;
+  color: whitesmoke;
+  text-align: center;
+}
+.colorSuccess{
+  background-color: rgb(36, 209, 96);
+  color: whitesmoke;
+  font-weight: bold;
+}

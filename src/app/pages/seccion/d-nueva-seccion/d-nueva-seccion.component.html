@@ -1,0 +1,35 @@
+
+  <form [formGroup]="formSeccion">
+
+    <mat-form-field hintLabel="Max 10 characters" appearance="fill">
+      <mat-label>Nombre sección</mat-label>
+      <input matInput #input placeholder="Nombre" formControlName="nombre">
+      <mat-error *ngIf="formSeccion.controls['nombre'].hasError('required')">
+      {{nombreRequerido}}
+      </mat-error>
+    </mat-form-field>
+    &nbsp;
+    <mat-form-field hintLabel="Max 10 characters" appearance="fill">
+      <mat-label>Abreviatura</mat-label>
+      <input matInput #input placeholder="Abreviatura" formControlName="abreviatura">
+      <mat-error *ngIf="formSeccion.controls['abreviatura'].hasError('required')">
+        {{nombreRequerido}}
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Estado</mat-label>
+      <mat-select formControlName="enabled">
+        <mat-option value="true">Activo</mat-option>
+        <mat-option value="false">Inactivo</mat-option>
+      </mat-select>
+      <mat-error *ngIf="formSeccion.controls['enabled'].hasError('required')">
+        {{nombreRequerido}}
+        </mat-error>
+    </mat-form-field>
+    <div class="">
+      <button mat-raised-button color="primary" (click)="guardarRegistro()">Registrar</button>
+    </div>
+
+
+  </form>
+

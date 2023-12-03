@@ -9,6 +9,8 @@ import { DashboardComponent } from './pages/admin/dashboard/dashboard.component'
 import { NormalGuard } from './services/normal.guard';
 import { AdminGuard } from './services/admin.guard';
 import { AlumnosComponent } from './pages/alumnos/alumnos.component';
+import { SeccionComponent } from './pages/seccion/seccion.component';
+import { FseccionComponent } from './pages/seccion/fseccion/fseccion.component';
 
 const routes: Routes = [
   {
@@ -41,6 +43,12 @@ const routes: Routes = [
   {
     path:'admin-alumno',
     component: AlumnosComponent,
+    pathMatch: 'full',
+    canActivate:[AdminGuard]
+  },
+  {
+    path:'regSeccion',
+    component: FseccionComponent,
     pathMatch: 'full',
     canActivate:[AdminGuard]
   }
